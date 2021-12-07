@@ -2,6 +2,7 @@ import NetInfo, { useNetInfo } from '@react-native-community/netinfo';
 import React, { useEffect, useRef, useState } from 'react';
 import { StatusBar, View } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
+import Toast from 'react-native-toast-message';
 import AppNavigation from '../navigation/AppNavigation';
 import { ApplicationStyles, Colors } from '../theme';
 
@@ -28,7 +29,7 @@ const RootContainer = () => {
     <View style={[ApplicationStyles.screen.mainContainer]}>
       <StatusBar backgroundColor={Colors.themeGreen} />
       <AppNavigation ref={navRef} />
-      {/* <Toast ref={ref => Toast.setRef(ref)} /> */}
+      <Toast ref={ref => Toast.setRef(ref)} />
       {/* <AppUpdateModal /> */}
       {/* {!internet && <NoInternet />} */}
     </View>
