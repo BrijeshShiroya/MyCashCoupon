@@ -2,11 +2,10 @@ import { call, put, select } from 'redux-saga/effects';
 import AuthActions from '../redux/AuthRedux';
 import { Platform } from 'react-native';
 import { getDeviceId, getError } from '../services/Utils';
-import messaging from '@react-native-firebase/messaging';
 
 export function* login(api, action) {
   const device_id = yield getDeviceId();
-  const device_token = yield messaging().getToken(); //getting device token
+  const device_token = ''; //getting device token
   const response = yield call(api.login, {
     email: action?.email,
     password: action?.password,
