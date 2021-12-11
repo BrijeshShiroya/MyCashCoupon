@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
   headerContainer: {
     width: '100%',
     height: Platform.OS === 'android' ? verticalScale(60) : verticalScale(81),
-    backgroundColor: Colors.themeBlack,
+    backgroundColor: Colors.themeWhite,
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: scale(20),

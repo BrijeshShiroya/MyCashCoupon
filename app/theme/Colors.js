@@ -1,8 +1,14 @@
 const colors = {
   transparent: 'rgba(0,0,0,0)',
-  themeBlack: 'black',
+  themeWhite: '#FFF',
+  themeGrey: '#DFDFE4',
+  themePurple: '#7540EE',
+  themeOrange: '#FF7052',
+  lightPurple: '#7540EE20',
+  lightOrange: '#FF705220',
+  inputColor: '#787993',
+  darkBlue: '#25265E',
   themeRed: '#FB0013',
-  themeGrey: '#898C93',
   themeRedDisable: '#FB001350',
   white: 'white',
   lightWhite: '#FFFFFF50',
@@ -18,6 +24,6 @@ const colors = {
   lightRed: '#FB001330',
   lightblack: '#00000090',
   filterTopCategory: '#F2F2F2',
-  filterSep: '#E7E7E7',
+  filterSep: '#E7E7E7'
 };
 export default colors;
