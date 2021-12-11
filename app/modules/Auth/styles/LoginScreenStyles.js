@@ -39,16 +39,18 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between'
     },
     bottomContainer: {
-        marginTop: verticalScale(125),
+        flex: 1,
+        alignItems: 'flex-end',
         flexDirection: 'row',
         justifyContent: 'center',
+        marginBottom: 14
     },
     stillWithout: {
         fontFamily: Fonts.type.regular,
         fontSize: Fonts.size.regular,
         color: colors.inputColor,
-        alignSelf: 'center',
-        marginBottom: 6,
+        alignSelf: 'flex-end',
+        marginBottom: 7,
         marginRight: 4
     },
 
