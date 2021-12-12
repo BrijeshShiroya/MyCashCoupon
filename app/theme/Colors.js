@@ -6,6 +6,7 @@ const colors = {
   themeOrange: '#FF7052',
   themeGrey: '#BABABA',
   themeGreen: '#7BC541',
+  themeBlack: '#141927',
   lightPurple: '#7540EE20',
   lightOrange: '#FF705220',
   inputColor: '#787993',

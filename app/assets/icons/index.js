@@ -33,6 +33,7 @@ const icons = {
   rightRed: require('./rightRed.png'),
   addMoney: require('./addMoney.png'),
   withdrawMoney: require('./withdrawMoney.png'),
+  barcode: require('./barcode.png'),
 };
 
 export default icons;

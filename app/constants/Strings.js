@@ -14,7 +14,9 @@ const strings = {
   alreadyAccount: 'I already have an account.',
   history: 'History',
   balance: 'Balance',
-  rs: '₹'
+  rs: '₹',
+  welcomeBack: 'Welcome back to My Cash Coupon',
+  withdraw: 'Withdraw'
 };
 
 export default strings;
