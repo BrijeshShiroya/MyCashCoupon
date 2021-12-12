@@ -7,7 +7,7 @@ import strings from '../../constants/Strings';
 import colors from '../../theme/Colors';
 import styles from './styles/LoginScreenStyles';
 
-const LoginScreen = () => {
+const LoginScreen = ({ navigation }) => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
@@ -16,7 +16,7 @@ const LoginScreen = () => {
     }
 
     const onCreatePress = () => {
-
+        navigation.navigate('RegisterScreen')
     }
 
     return (
