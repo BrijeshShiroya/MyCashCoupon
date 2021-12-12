@@ -11,7 +11,8 @@ const strings = {
   name: 'Name',
   mobile: 'Mobile',
   username: 'User Name',
-  alreadyAccount: 'I already have an account.'
+  alreadyAccount: 'I already have an account.',
+  history: 'History'
 };
 
 export default strings;

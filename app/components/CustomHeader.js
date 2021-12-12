@@ -11,7 +11,7 @@ const leftSection = (leftIcon, leftIconStyle, leftOnPress) => (
         activeOpacity={0.7}
         hitSlop={styles.hitSlop}
         onPress={leftOnPress}>
-        <FastImage source={leftIcon} style={[styles.iconStyle, leftIconStyle]} />
+        <FastImage source={leftIcon} style={[styles.iconStyle, leftIconStyle]} resizeMode='contain' />
     </TouchableOpacity>
 );
 

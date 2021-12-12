@@ -1,7 +1,8 @@
 import { StyleSheet } from 'react-native';
-import { scale } from '../../../theme';
+import { ApplicationStyles, scale } from '../../../theme';
 
 const styles = StyleSheet.create({
+  ...ApplicationStyles.screen,
   container: {
     padding: scale(20),
   },

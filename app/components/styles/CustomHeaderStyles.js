@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
   headerContainer: {
     width: '100%',
     height: Platform.OS === 'android' ? verticalScale(60) : verticalScale(81),
-    backgroundColor: Colors.themeWhite,
+    backgroundColor: Colors.transparent,
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: scale(20),
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     maxWidth: scale(200),
     fontSize: verticalScale(18),
     fontFamily: Fonts.type.bold,
-    color: Colors.white,
+    color: Colors.darkBlue,
     textAlign: 'center',
   },
   left: {
