@@ -31,6 +31,8 @@ const icons = {
   noCart: require('./noCart.png'),
   rightBlack: require('./rightBlack.png'),
   rightRed: require('./rightRed.png'),
+  addMoney: require('./addMoney.png'),
+  withdrawMoney: require('./withdrawMoney.png'),
 };
 
 export default icons;

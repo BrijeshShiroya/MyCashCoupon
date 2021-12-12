@@ -3,11 +3,15 @@ import CustomHeader from './CustomHeader'
 import CustomTextInput from './CustomTextInput'
 import CustomButton from './CustomButton';
 import BottomLineButton from './BottomLineButton'
+import WalletBalance from './WalletBalance'
+import HistoryItem from './HistoryItem'
 
 export {
     Loader,
     CustomHeader,
     CustomTextInput,
     CustomButton,
-    BottomLineButton
+    BottomLineButton,
+    WalletBalance,
+    HistoryItem
 }

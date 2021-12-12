@@ -12,7 +12,9 @@ const strings = {
   mobile: 'Mobile',
   username: 'User Name',
   alreadyAccount: 'I already have an account.',
-  history: 'History'
+  history: 'History',
+  balance: 'Balance',
+  rs: '₹'
 };
 
 export default strings;
