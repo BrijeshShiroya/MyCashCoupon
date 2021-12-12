@@ -10,7 +10,7 @@ const colors = {
   lightPurple: '#7540EE20',
   lightOrange: '#FF705220',
   inputColor: '#787993',
-  darkBlue: '#25265E',
+  darkBlue: '#141927',
   themeRed: '#FB0013',
   themeRedDisable: '#FB001350',
   white: 'white',

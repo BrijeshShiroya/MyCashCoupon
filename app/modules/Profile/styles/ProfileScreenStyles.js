@@ -3,7 +3,9 @@ import { scale } from '../../../theme';
 
 const styles = StyleSheet.create({
   container: {
-    padding: scale(20),
+    flex: 1,
+    alignItems: "center",
+    justifyContent: 'center'
   },
 });
 

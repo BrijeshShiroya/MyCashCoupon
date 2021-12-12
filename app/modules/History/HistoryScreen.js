@@ -6,7 +6,7 @@ import { BalanceType } from '../../components/HistoryItem';
 import strings from '../../constants/Strings';
 import styles from './styles/HistoryScreenStyles';
 
-const HistoryScreen = () => {
+const HistoryScreen = ({ navigation }) => {
   const data = [
     { type: BalanceType.added, date: '10-Nov-2021', price: '200' },
     { type: BalanceType.added, date: '12-Nov-2021', price: '310' },

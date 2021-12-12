@@ -19,6 +19,10 @@ const LoginScreen = ({ navigation }) => {
         navigation.navigate('RegisterScreen')
     }
 
+    const onLoginPress = () => {
+        navigation.navigate('TabBar')
+    }
+
     return (
         <View style={styles.mainContainer}>
             <View style={styles.container} >
@@ -42,7 +46,7 @@ const LoginScreen = ({ navigation }) => {
                         onChangeText={text => setPassword(text)}
                     />
                     <View style={styles.buttonContainer}>
-                        <CustomButton title={strings.loginButton} />
+                        <CustomButton title={strings.loginButton} onPress={onLoginPress} />
                         <BottomLineButton title={strings.forgotPassword} onPress={forgotPress} />
                     </View>
                     <View style={styles.bottomContainer}>

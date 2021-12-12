@@ -2,10 +2,10 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import styles from './styles/ProfileScreenStyles';
 
-const ProfileScreen = () => {
+const ProfileScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text>ProfileScreen</Text>
+      <Text onPress={() => navigation.navigate('LoginScreen')}>Logout</Text>
     </View>
   );
 };

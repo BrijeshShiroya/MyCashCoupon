@@ -111,9 +111,9 @@ const RootStackScreen = (props, ref) => {
     <SafeAreaProvider>
       <NavigationContainer ref={ref}>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="TabBar" component={TabBar} />
           <Stack.Screen name="LoginScreen" component={LoginScreen} />
           <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
+          <Stack.Screen name="TabBar" component={TabBar} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

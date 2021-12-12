@@ -7,7 +7,7 @@ import { CustomTextInput } from '../../components';
 import strings from '../../constants/Strings';
 import styles from './styles/HomeScreenStyles';
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
     const [amount, setAmount] = useState('5000')
 
     const onBarcodePress = () => {
@@ -19,7 +19,7 @@ const HomeScreen = () => {
     }
 
     const onHistoryPress = () => {
-
+        navigation.navigate('HistoryStack')
     }
 
     return (
