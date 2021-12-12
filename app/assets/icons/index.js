@@ -7,7 +7,7 @@ const icons = {
   search: require('./search.png'),
   back: require('./back.png'),
   tabHome: require('./tabHome.png'),
-  tabSearch: require('./tabSearch.png'),
+  tabHistory: require('./tabHistory.png'),
   tabCart: require('./tabCart.png'),
   tabProfile: require('./tabProfile.png'),
   slider1: require('./slider1.png'),
