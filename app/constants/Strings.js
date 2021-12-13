@@ -13,10 +13,12 @@ const strings = {
   username: 'User Name',
   alreadyAccount: 'I already have an account.',
   history: 'History',
+  cashbackStores: 'Cashback Stores',
   balance: 'Balance',
   rs: '₹',
   welcomeBack: 'Welcome back to My Cash Coupon',
-  withdraw: 'Withdraw'
+  withdraw: 'Withdraw',
+  topCashback: 'TOP Cashback Stores'
 };
 
 export default strings;

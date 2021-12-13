@@ -89,6 +89,18 @@ const styles = StyleSheet.create({
         fontFamily: Fonts.type.bold,
         fontSize: Fonts.size.h1,
         color: Colors.themeBlack,
+    },
+    itemSep: {
+        width: 20
+    },
+    cashbackList: {
+        marginTop: verticalScale(18)
+    },
+    listHeader: {
+        marginTop: verticalScale(18),
+        fontFamily: Fonts.type.regular,
+        fontSize: Fonts.size.input,
+        color: Colors.themeBlack,
     }
 });
 

@@ -5,6 +5,7 @@ import CustomButton from './CustomButton';
 import BottomLineButton from './BottomLineButton'
 import WalletBalance from './WalletBalance'
 import HistoryItem from './HistoryItem'
+import CashbackItem from './CashbackItem'
 
 export {
     Loader,
@@ -13,5 +14,6 @@ export {
     CustomButton,
     BottomLineButton,
     WalletBalance,
-    HistoryItem
+    HistoryItem,
+    CashbackItem
 }

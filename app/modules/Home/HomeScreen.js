@@ -1,14 +1,21 @@
 import React, { useState } from 'react';
-import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { FlatList, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import icons from '../../assets/icons';
 import CustomButton from '../../components/CustomButton';
-import { CustomTextInput } from '../../components';
+import { CashbackItem, CustomTextInput } from '../../components';
 import strings from '../../constants/Strings';
 import styles from './styles/HomeScreenStyles';
 
 const HomeScreen = ({ navigation }) => {
     const [amount, setAmount] = useState('5000')
+    const data = [
+        { title: 'Amazon' },
+        { title: 'Big bazar' },
+        { title: 'Flipkart' },
+        { title: 'Myntra' },
+        { title: 'Ajio' },
+    ]
 
     const onBarcodePress = () => {
 
@@ -57,6 +64,16 @@ const HomeScreen = ({ navigation }) => {
                         <Text style={styles.history}>{strings.history}</Text>
                     </TouchableOpacity>
                 </View>
+                <>
+                    <Text style={styles.listHeader}>{strings.topCashback}</Text>
+                    <FlatList
+                        horizontal
+                        contentContainerStyle={styles.cashbackList}
+                        showsHorizontalScrollIndicator={false}
+                        data={data}
+                        ItemSeparatorComponent={() => <View style={styles.itemSep} />}
+                        renderItem={({ item }) => <CashbackItem {...item} />} />
+                </>
             </ScrollView>
         </View>
     );
