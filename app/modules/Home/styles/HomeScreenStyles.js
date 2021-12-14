@@ -84,13 +84,15 @@ const styles = StyleSheet.create({
         color: Colors.themeGrey,
     },
     priceContainer: {
-        flexDirection: 'row'
+        flexDirection: 'row',
+        alignItems: 'center'
     },
     input: {
         borderBottomWidth: 0,
         fontFamily: Fonts.type.bold,
         fontSize: Fonts.size.h1,
         color: Colors.themeBlack,
+        marginTop: 5
     },
     itemSep: {
         width: 20

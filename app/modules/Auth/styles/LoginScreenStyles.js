@@ -53,7 +53,9 @@ const styles = StyleSheet.create({
         marginBottom: 7,
         marginRight: 4
     },
-
+    input: {
+        height: 48
+    }
 });
 
 export default styles;

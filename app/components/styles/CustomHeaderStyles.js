@@ -4,7 +4,7 @@ import { Colors, scale, verticalScale, Fonts } from '../../theme';
 const styles = StyleSheet.create({
   headerContainer: {
     width: '100%',
-    height: Platform.OS === 'android' ? verticalScale(60) : verticalScale(81),
+    height: Platform.OS === 'android' ? verticalScale(81) : verticalScale(81),
     backgroundColor: Colors.transparent,
     flexDirection: 'row',
     alignItems: 'center',

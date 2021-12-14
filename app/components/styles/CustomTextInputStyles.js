@@ -16,8 +16,7 @@ const styles = StyleSheet.create({
     borderBottomColor: colors.themeGrey,
     borderBottomWidth: 1,
     fontSize: Fonts.size.input,
-    fontFamily: Fonts.type.regular,
-    height: 48
+    fontFamily: Fonts.type.regular
   },
   alertText: {
     color: Colors.themeGreen,

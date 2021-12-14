@@ -40,6 +40,7 @@ const HomeScreen = ({ navigation }) => {
                         <View style={styles.priceContainer}>
                             <Text style={styles.rs}>{strings.rs}</Text>
                             <CustomTextInput
+                                numberOfLines={1}
                                 value={amount}
                                 keyboardType={'number-pad'}
                                 placeholder={''}
