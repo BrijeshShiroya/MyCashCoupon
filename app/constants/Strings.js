@@ -18,7 +18,12 @@ const strings = {
   rs: '₹',
   welcomeBack: 'Welcome back to My Cash Coupon',
   withdraw: 'Withdraw',
-  topCashback: 'TOP Cashback Stores'
+  topCashback: 'TOP Cashback Stores',
+  invalidEmail: 'Please enter valid email',
+  invalidPassword: 'Please enter password',
+  cancel: 'Cancel',
+  logout: 'Logout',
+  logoutConfirmation: 'Are you sure you want to logout?',
 };
 
 export default strings;

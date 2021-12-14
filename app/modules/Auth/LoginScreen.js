@@ -1,15 +1,27 @@
-import React, { useState } from 'react';
-import { ScrollView, Text, View } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { Keyboard, ScrollView, Text, View, Alert } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import icons from '../../assets/icons';
-import { BottomLineButton, CustomButton, CustomTextInput } from '../../components';
+import { BottomLineButton, CustomButton, CustomTextInput, Loader } from '../../components';
 import strings from '../../constants/Strings';
 import colors from '../../theme/Colors';
 import styles from './styles/LoginScreenStyles';
+import appConstants from '../../constants/AppConsts';
+import { useDispatch, useSelector } from 'react-redux';
+import AuthTypes from '../../redux/AuthRedux';
+
 
 const LoginScreen = ({ navigation }) => {
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+    const dispatch = useDispatch();
+    const [email, setEmail] = useState('admin@admin.com')
+    const [password, setPassword] = useState('password')
+    const { error, fetching } = useSelector(state => state.auth);
+
+    useEffect(() => {
+        if (error) {
+            Alert.alert(strings.myCashCoupon, error);
+        }
+    }, [error]);
 
     const forgotPress = () => {
 
@@ -20,7 +32,14 @@ const LoginScreen = ({ navigation }) => {
     }
 
     const onLoginPress = () => {
-        navigation.navigate('TabBar')
+        if (appConstants.email_reg.test(email?.trim()) === false) {
+            Alert.alert(strings.myCashCoupon, strings.invalidEmail);
+        } else if (password?.trim() === '') {
+            Alert.alert(strings.myCashCoupon, strings.invalidPassword);
+        } else {
+            Keyboard.dismiss();
+            dispatch(AuthTypes.authRequest(email.toLocaleLowerCase(), password));
+        }
     }
 
     return (
@@ -57,6 +76,7 @@ const LoginScreen = ({ navigation }) => {
                     </View>
                 </ScrollView>
             </View>
+            {fetching && <Loader />}
         </View>
     );
 };

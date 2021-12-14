@@ -4,12 +4,10 @@ import { Platform } from 'react-native';
 import { getDeviceId, getError } from '../services/Utils';
 
 export function* login(api, action) {
-  const device_id = yield getDeviceId();
   const device_token = ''; //getting device token
   const response = yield call(api.login, {
     email: action?.email,
     password: action?.password,
-    device_id,
     device_type: Platform.OS,
     device_token,
   });
