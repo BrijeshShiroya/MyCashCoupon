@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.lightPurple,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: verticalScale(23),
+    borderRadius: verticalScale(100),
     paddingHorizontal: scale(24),
     paddingVertical: verticalScale(14)
   },

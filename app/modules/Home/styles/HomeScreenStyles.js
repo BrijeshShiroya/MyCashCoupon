@@ -57,7 +57,9 @@ const styles = StyleSheet.create({
     },
     historyContainer: {
         flexDirection: 'row',
-        paddingRight: scale(8)
+        paddingRight: scale(8),
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     withdrawButton: {
         backgroundColor: Colors.themeBlack,

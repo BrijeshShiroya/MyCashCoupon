@@ -92,7 +92,7 @@ const TabBar = () => {
       screenOptions={({ route }) => ({
         headerShown: false,
         tabBarShowLabel: false,
-        tabBarStyle: { backgroundColor: colors.themeWhite, borderRadius: 18 },
+        tabBarStyle: { backgroundColor: colors.themeWhite, borderTopLeftRadius: 18, borderTopRightRadius: 18 },
         tabBarIcon: ({ focused, color, size }) => {
           const { icon, style } = iconStyle(route.name, focused);
           return <Image source={icon} style={style} resizeMode={'contain'} />;
