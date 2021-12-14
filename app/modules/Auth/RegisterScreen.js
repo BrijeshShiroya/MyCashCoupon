@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { ScrollView, Text, View } from 'react-native';
+import { Keyboard, ScrollView, Text, View } from 'react-native';
 import { BottomLineButton, CustomButton, CustomTextInput } from '../../components';
+import appConstants from '../../constants/AppConsts';
 import strings from '../../constants/Strings';
+import { showAlert } from '../../services/Utils';
 import colors from '../../theme/Colors';
 import styles from './styles/RegisterScreenStyles';
 
@@ -11,9 +13,35 @@ const RegisterScreen = ({ navigation }) => {
   const [email, setEmail] = useState('')
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [cPassword, setCPassword] = useState('')
 
   const onSignupPress = () => {
-
+    if (name?.trim() === '') {
+      showAlert(strings.invalidName);
+    } else if (mobile?.trim() === '') {
+      showAlert(strings.invalidMobile);
+    } else if (mobile?.trim().length < 10) {
+      showAlert(strings.mobileLength);
+    } else if (appConstants.email_reg.test(email?.trim()) === false) {
+      showAlert(strings.invalidEmail);
+    } else if (username?.trim() === '') {
+      showAlert(strings.invalidUsername);
+    } else if (password?.trim() === '') {
+      showAlert(strings.invalidPassword);
+    } else if (password?.trim() !== cPassword?.trim()) {
+      showAlert(strings.passwordMismatch);
+    } else {
+      Keyboard.dismiss();
+      // dispatch(
+      //   AuthTypes.registerRequest(
+      //     email?.toLocaleLowerCase(),
+      //     firstname,
+      //     lastname,
+      //     mobile,
+      //     password,
+      //   ),
+      // );
+    }
   }
 
   const onLoginPress = () => {
@@ -64,6 +92,14 @@ const RegisterScreen = ({ navigation }) => {
             style={styles.input}
             containerStyle={styles.emailContainer}
             onChangeText={text => setPassword(text)}
+          />
+          <CustomTextInput
+            secureTextEntry
+            value={cPassword}
+            placeholder={strings.confirmPassword}
+            style={styles.input}
+            containerStyle={styles.emailContainer}
+            onChangeText={text => setCPassword(text)}
           />
           <View style={styles.buttonContainer}>
             <CustomButton title={strings.signup} onPress={onSignupPress} />

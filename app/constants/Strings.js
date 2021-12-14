@@ -2,6 +2,7 @@ const strings = {
   myCashCoupon: 'My Cash Coupon',
   email: 'Email address',
   password: 'Password',
+  confirmPassword: 'Confirm Password',
   loginButton: 'Login',
   forgotPassword: 'Forgot password?',
   stillWithout: 'Still without account?',
@@ -20,10 +21,15 @@ const strings = {
   withdraw: 'Withdraw',
   topCashback: 'TOP Cashback Stores',
   invalidEmail: 'Please enter valid email',
+  invalidName: 'Please enter Name',
+  invalidUsername: 'Please enter Username',
   invalidPassword: 'Please enter password',
+  invalidMobile: 'Please enter Mobile number',
+  mobileLength: 'Please enter 10 digit Mobile number',
   cancel: 'Cancel',
   logout: 'Logout',
   logoutConfirmation: 'Are you sure you want to logout?',
+  passwordMismatch: 'Password and Confirm does not match',
 };
 
 export default strings;

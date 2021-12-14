@@ -1,5 +1,7 @@
 import apisauce from 'apisauce';
+import { Alert } from 'react-native';
 import DeviceInfo from 'react-native-device-info';
+import strings from '../constants/Strings';
 
 export const messages = {
   productAdded: 'Product added in cart successfully.',
@@ -32,4 +34,8 @@ export const getPriceWithSymbol = (price = '--') => {
 
 export const getDeviceId = async () => {
   return await DeviceInfo.getUniqueId();
+};
+
+export const showAlert = message => {
+  Alert.alert(strings.myCashCoupon, message);
 };
