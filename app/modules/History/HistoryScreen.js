@@ -10,6 +10,7 @@ import styles from './styles/HistoryScreenStyles';
 const HistoryScreen = ({ navigation }) => {
   const dispatch = useDispatch();
   const { historyList, fetching } = useSelector(state => state.history)
+  const { user } = useSelector(state => state.auth)
 
   useEffect(() => {
     dispatch(HistoryTypes.historyRequest());
@@ -27,7 +28,7 @@ const HistoryScreen = ({ navigation }) => {
         data={historyList}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.listContainer}
-        ListHeaderComponent={() => <WalletBalance amount={'5000'} />}
+        ListHeaderComponent={() => <WalletBalance amount={user?.wallet || '0'} />}
         ItemSeparatorComponent={() => <View style={styles.sep} />}
         renderItem={({ item }) => <HistoryItem {...item} />}
       />

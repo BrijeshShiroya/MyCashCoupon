@@ -9,8 +9,7 @@ const home = () => {
   const login = credentials => api.post('login', credentials);
   const register = credentials => api.post('register', credentials);
   const history = (id) => api.post('gethistory', id);
-  const bannerData = () => api.get('listBanners');
-  const marquee = () => api.get('config');
+  const config = () => api.get('config');
   const brands = type => api.post('listBrands', type);
   const exlusiveProduct = () => api.get('exclusiveProducts');
   const productFilter = filterData => api.post('productfilter', filterData);
@@ -34,8 +33,7 @@ const home = () => {
     login,
     register,
     history,
-    bannerData,
-    marquee,
+    config,
     brands,
     exlusiveProduct,
     history,

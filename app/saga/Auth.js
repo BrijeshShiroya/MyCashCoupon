@@ -14,7 +14,7 @@ export function* login(api, action) {
   });
   if (response?.data?.status === 200 && !response?.data?.error) {
     yield put(
-      AuthActions.authSuccess({ ...response?.data?.data?.[0] } || null),
+      AuthActions.authSuccess({ ...response?.data?.data?.[0], wallet: response?.data?.wallet } || null),
     );
   } else {
     const error = yield call(getError, response?.data);
@@ -34,7 +34,7 @@ export function* register(api, action) {
   });
   if (response?.data?.status === 200 && !response?.data?.error) {
     yield put(
-      AuthActions.authSuccess({ ...response?.data?.data?.[0] } || null),
+      AuthActions.authSuccess({ ...response?.data?.data?.[0], wallet: response?.data?.wallet } || null),
     );
   } else {
     const error = yield call(getError, response?.data);
