@@ -7,6 +7,7 @@ const api = apiConfig(__DEV__ ? Secrets.API_URL_DEBUG : Secrets.API_URL);
 
 const home = () => {
   const login = credentials => api.post('login', credentials);
+  const register = credentials => api.post('register', credentials);
   const bannerData = () => api.get('listBanners');
   const marquee = () => api.get('config');
   const brands = type => api.post('listBrands', type);
@@ -18,7 +19,6 @@ const home = () => {
   const productDetails = id => api.post('getProductById', id);
   const getProductsByBrandId = id => api.post('getProductbyBrandid', id);
   const getProductsByCategoryId = id => api.post('getProductbyCategoryid', id);
-  const register = credentials => api.post('register', credentials);
   const addToCart = cartData => api.post('cart', cartData);
   const cart = credentials => api.post('cartlist', credentials);
   const cartDelete = id => api.post('cartdelete', id);

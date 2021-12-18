@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Keyboard, ScrollView, Text, View, Alert } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import icons from '../../assets/icons';
@@ -15,13 +15,7 @@ const LoginScreen = ({ navigation }) => {
     const dispatch = useDispatch();
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const { error, fetching } = useSelector(state => state.auth);
-
-    useEffect(() => {
-        if (error) {
-            Alert.alert(strings.myCashCoupon, error);
-        }
-    }, [error]);
+    const { fetching } = useSelector(state => state.auth);
 
     const forgotPress = () => {
 

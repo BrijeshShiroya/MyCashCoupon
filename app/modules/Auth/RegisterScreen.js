@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
 import { Keyboard, ScrollView, Text, View } from 'react-native';
-import { BottomLineButton, CustomButton, CustomTextInput } from '../../components';
+import { useDispatch, useSelector } from 'react-redux';
+import { BottomLineButton, CustomButton, CustomTextInput, Loader } from '../../components';
 import appConstants from '../../constants/AppConsts';
 import strings from '../../constants/Strings';
+import AuthTypes from '../../redux/AuthRedux';
 import { showAlert } from '../../services/Utils';
 import colors from '../../theme/Colors';
 import styles from './styles/RegisterScreenStyles';
 
 const RegisterScreen = ({ navigation }) => {
+  const dispatch = useDispatch()
   const [name, setName] = useState('')
   const [mobile, setMobile] = useState('')
   const [email, setEmail] = useState('')
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [cPassword, setCPassword] = useState('')
+  const { fetching } = useSelector(state => state.auth);
 
   const onSignupPress = () => {
     if (name?.trim() === '') {
@@ -32,15 +36,15 @@ const RegisterScreen = ({ navigation }) => {
       showAlert(strings.passwordMismatch);
     } else {
       Keyboard.dismiss();
-      // dispatch(
-      //   AuthTypes.registerRequest(
-      //     email?.toLocaleLowerCase(),
-      //     firstname,
-      //     lastname,
-      //     mobile,
-      //     password,
-      //   ),
-      // );
+      dispatch(
+        AuthTypes.registerRequest(
+          email?.toLocaleLowerCase(),
+          name,
+          name,
+          mobile,
+          password,
+        ),
+      );
     }
   }
 
@@ -112,6 +116,7 @@ const RegisterScreen = ({ navigation }) => {
           </View>
         </ScrollView>
       </View>
+      {fetching && <Loader />}
     </View>
   );
 };

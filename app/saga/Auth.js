@@ -1,7 +1,8 @@
 import { call, put, select } from 'redux-saga/effects';
 import AuthActions from '../redux/AuthRedux';
-import { Platform } from 'react-native';
-import { getDeviceId, getError } from '../services/Utils';
+import { Alert, Platform } from 'react-native';
+import { getError } from '../services/Utils';
+import strings from '../constants/Strings';
 
 export function* login(api, action) {
   const device_token = ''; //getting device token
@@ -22,14 +23,14 @@ export function* login(api, action) {
 }
 
 export function* register(api, action) {
-  const device_id = yield getDeviceId();
+  const device_token = ''; //getting device token
   const response = yield call(api.register, {
     email: action?.email,
     password: action?.password,
     first_name: action?.firstname,
     last_name: action?.lastname,
     phone: action?.mobile,
-    device_id,
+    device_token
   });
   if (response?.data?.status === 200 && !response?.data?.error) {
     yield put(
@@ -37,6 +38,7 @@ export function* register(api, action) {
     );
   } else {
     const error = yield call(getError, response?.data);
+    Alert.alert(strings.myCashCoupon, error?.trim());
     yield put(AuthActions.authFailure(error));
   }
 }
@@ -50,6 +52,7 @@ export function* getOrders(api, action) {
     yield put(AuthActions.orderSuccess(response?.data?.data || []));
   } else {
     const error = yield call(getError, response?.data);
+    Alert.alert(strings.myCashCoupon, error?.trim());
     yield put(AuthActions.authFailure(error));
   }
 }
