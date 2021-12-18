@@ -8,11 +8,11 @@ const api = apiConfig(__DEV__ ? Secrets.API_URL_DEBUG : Secrets.API_URL);
 const home = () => {
   const login = credentials => api.post('login', credentials);
   const register = credentials => api.post('register', credentials);
+  const history = (id) => api.post('gethistory', id);
   const bannerData = () => api.get('listBanners');
   const marquee = () => api.get('config');
   const brands = type => api.post('listBrands', type);
   const exlusiveProduct = () => api.get('exclusiveProducts');
-  const productlist = () => api.get('listProducts');
   const productFilter = filterData => api.post('productfilter', filterData);
   const homeCategories = () => api.get('homeCategories');
   const categories = () => api.get('listCategories');
@@ -31,22 +31,23 @@ const home = () => {
     api.post('changepassword', passwordInfo);
 
   return {
+    login,
+    register,
+    history,
     bannerData,
     marquee,
     brands,
     exlusiveProduct,
-    productlist,
+    history,
     productFilter,
     homeCategories,
     categories,
     productDetails,
     getProductsByBrandId,
     getProductsByCategoryId,
-    login,
     addToCart,
     cart,
     cartDelete,
-    register,
     addOrder,
     orderStatus,
     myorders,

@@ -1,21 +1,20 @@
-import React from 'react';
-import { FlatList, Text, View } from 'react-native';
+import React, { useEffect } from 'react';
+import { FlatList, View } from 'react-native';
+import { useDispatch, useSelector } from 'react-redux';
 import icons from '../../assets/icons';
-import { CustomHeader, HistoryItem, WalletBalance } from '../../components';
-import { BalanceType } from '../../components/HistoryItem';
+import { CustomHeader, HistoryItem, Loader, WalletBalance } from '../../components';
 import strings from '../../constants/Strings';
+import HistoryTypes from '../../redux/HistoryRedux';
 import styles from './styles/HistoryScreenStyles';
 
 const HistoryScreen = ({ navigation }) => {
-  const data = [
-    { type: BalanceType.added, date: '10-Nov-2021', price: '200' },
-    { type: BalanceType.added, date: '12-Nov-2021', price: '310' },
-    { type: BalanceType.withdraw, date: '14-Nov-2021', price: '150' },
-    { type: BalanceType.added, date: '16-Nov-2021', price: '180' },
-    { type: BalanceType.added, date: '18-Nov-2021', price: '180' },
-    { type: BalanceType.added, date: '20-Nov-2021', price: '180' },
-    { type: BalanceType.added, date: '01-Dec-2021', price: '180' },
-  ]
+  const dispatch = useDispatch();
+  const { historyList, fetching } = useSelector(state => state.history)
+
+  useEffect(() => {
+    dispatch(HistoryTypes.historyRequest());
+  }, [dispatch])
+
   return (
     <View style={styles.mainContainer}>
       <CustomHeader
@@ -25,13 +24,14 @@ const HistoryScreen = ({ navigation }) => {
         leftOnPress={() => navigation.goBack()}
       />
       <FlatList
-        data={data}
+        data={historyList}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.listContainer}
         ListHeaderComponent={() => <WalletBalance amount={'5000'} />}
         ItemSeparatorComponent={() => <View style={styles.sep} />}
         renderItem={({ item }) => <HistoryItem {...item} />}
       />
+      {fetching && <Loader />}
     </View>
   );
 };
