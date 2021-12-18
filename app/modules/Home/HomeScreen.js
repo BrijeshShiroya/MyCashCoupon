@@ -6,9 +6,11 @@ import CustomButton from '../../components/CustomButton';
 import { CashbackItem, CustomTextInput } from '../../components';
 import strings from '../../constants/Strings';
 import styles from './styles/HomeScreenStyles';
+import { useSelector } from 'react-redux';
 
 const HomeScreen = ({ navigation }) => {
     const [amount, setAmount] = useState('5000')
+    const { user } = useSelector(state => state.auth)
     const data = [
         { title: 'Amazon' },
         { title: 'Big bazar' },
@@ -32,7 +34,7 @@ const HomeScreen = ({ navigation }) => {
     return (
         <View style={styles.mainContainer}>
             <ScrollView contentContainerStyle={styles.container}>
-                <Text style={styles.headerTitle}>Hi, Murtaza</Text>
+                <Text style={styles.headerTitle}>{`Hi, ${user?.first_name || 'User'}`}</Text>
                 <Text style={styles.welcomeBack}>{strings.welcomeBack}</Text>
                 <View style={styles.balanceContainer}>
                     <View style={styles.amountContainer}>
