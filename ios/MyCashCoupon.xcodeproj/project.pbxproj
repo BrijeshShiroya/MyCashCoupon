@@ -12,10 +12,10 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2300E3FF48FC54F68CD90F8C /* libPods-MyCashCoupon-MyCashCouponTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0619336BC6715A06B59364A3 /* libPods-MyCashCoupon-MyCashCouponTests.a */; };
+		52BA95299C21475E8D23B5E9 /* JosefinSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF334AD25CF74F2C887F1906 /* JosefinSans-Regular.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		BDD92D1A0CB5015216C2D24C /* libPods-MyCashCoupon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF0A71B438A3073F69C4F2A /* libPods-MyCashCoupon.a */; };
 		BE903453B88749CB90CA82F9 /* JosefinSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FA48800586A43E4AE46CB46 /* JosefinSans-Bold.ttf */; };
-		52BA95299C21475E8D23B5E9 /* JosefinSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF334AD25CF74F2C887F1906 /* JosefinSans-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +34,7 @@
 		00E356F21AD99517003FC87E /* MyCashCouponTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCashCouponTests.m; sourceTree = "<group>"; };
 		0619336BC6715A06B59364A3 /* libPods-MyCashCoupon-MyCashCouponTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyCashCoupon-MyCashCouponTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9A560308B47AF2CDF2D1AC /* Pods-MyCashCoupon-MyCashCouponTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCashCoupon-MyCashCouponTests.debug.xcconfig"; path = "Target Support Files/Pods-MyCashCoupon-MyCashCouponTests/Pods-MyCashCoupon-MyCashCouponTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0FA48800586A43E4AE46CB46 /* JosefinSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-Bold.ttf"; path = "../assets/fonts/JosefinSans-Bold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* MyCashCoupon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCashCoupon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = MyCashCoupon/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = MyCashCoupon/AppDelegate.m; sourceTree = "<group>"; };
@@ -44,10 +45,9 @@
 		2EF0A71B438A3073F69C4F2A /* libPods-MyCashCoupon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyCashCoupon.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = MyCashCoupon/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		EF334AD25CF74F2C887F1906 /* JosefinSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-Regular.ttf"; path = "../assets/fonts/JosefinSans-Regular.ttf"; sourceTree = "<group>"; };
 		F827A815B9D838EC280D3CC8 /* Pods-MyCashCoupon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCashCoupon.release.xcconfig"; path = "Target Support Files/Pods-MyCashCoupon/Pods-MyCashCoupon.release.xcconfig"; sourceTree = "<group>"; };
 		FB9D5ED66A03E312241D21FB /* Pods-MyCashCoupon-MyCashCouponTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCashCoupon-MyCashCouponTests.release.xcconfig"; path = "Target Support Files/Pods-MyCashCoupon-MyCashCouponTests/Pods-MyCashCoupon-MyCashCouponTests.release.xcconfig"; sourceTree = "<group>"; };
-		0FA48800586A43E4AE46CB46 /* JosefinSans-Bold.ttf */ = {isa = PBXFileReference; name = "JosefinSans-Bold.ttf"; path = "../assets/fonts/JosefinSans-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		EF334AD25CF74F2C887F1906 /* JosefinSans-Regular.ttf */ = {isa = PBXFileReference; name = "JosefinSans-Regular.ttf"; path = "../assets/fonts/JosefinSans-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,14 +155,14 @@
 			sourceTree = "<group>";
 		};
 		BE7AE51032CC48C48DF8FBBF /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				0FA48800586A43E4AE46CB46 /* JosefinSans-Bold.ttf */,
 				EF334AD25CF74F2C887F1906 /* JosefinSans-Regular.ttf */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
 			path = "";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
