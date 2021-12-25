@@ -20,7 +20,7 @@ const HomeScreen = ({ navigation }) => {
     ]
 
     const onBarcodePress = () => {
-
+        navigation.navigate('QRScanScreen')
     }
 
     const onWithdrawPress = () => {

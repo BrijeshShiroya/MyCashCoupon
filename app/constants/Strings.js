@@ -30,6 +30,11 @@ const strings = {
   logout: 'Logout',
   logoutConfirmation: 'Are you sure you want to logout?',
   passwordMismatch: 'Password and Confirm does not match',
+  couponScanHint: 'Please scan your coupon',
+  cancel: 'Cancel',
+  confirmCoupon: (coupon) => `Are you sure you want to add ${coupon} couponcode?`,
+  ok: 'Ok',
+  couponAdded: 'Coupon added successfully'
 };
 
 export default strings;

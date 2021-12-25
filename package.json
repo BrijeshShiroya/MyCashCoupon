@@ -23,7 +23,7 @@
     "react-native-fast-image": "^8.5.11",
     "react-native-keyboard-manager": "^6.5.4-3",
     "react-native-permissions": "^3.2.0",
-    "react-native-qrcode-scanner": "^1.5.4",
+    "react-native-qrcode-scanner-view": "^2.0.0",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.10.0",
     "react-native-splash-screen": "^3.2.0",

@@ -10,6 +10,7 @@ const home = () => {
   const register = credentials => api.post('register', credentials);
   const history = (id) => api.post('gethistory', id);
   const config = () => api.get('config');
+  const getcoupon = (couponData) => api.post('getcoupon', couponData);
   const brands = type => api.post('listBrands', type);
   const exlusiveProduct = () => api.get('exclusiveProducts');
   const productFilter = filterData => api.post('productfilter', filterData);
@@ -34,6 +35,7 @@ const home = () => {
     register,
     history,
     config,
+    getcoupon,
     brands,
     exlusiveProduct,
     history,

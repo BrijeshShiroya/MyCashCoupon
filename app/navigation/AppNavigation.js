@@ -12,6 +12,7 @@ import CartScreen from '../modules/Cart/CartScreen';
 import HistoryScreen from '../modules/History/HistoryScreen';
 import HomeScreen from '../modules/Home/HomeScreen';
 import ProfileScreen from '../modules/Profile/ProfileScreen';
+import QRScanScreen from '../modules/Home/QRScanScreen';
 import colors from '../theme/Colors';
 
 const Stack = createNativeStackNavigator();
@@ -58,6 +59,7 @@ const HomeStack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
+      <Stack.Screen name="QRScanScreen" component={QRScanScreen} />
     </Stack.Navigator>
   );
 };

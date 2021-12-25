@@ -9,6 +9,7 @@ const { Types, Creators } = createActions({
   registerRequest: ['email', 'firstname', 'lastname', 'mobile', 'password'],
   orderRequest: [],
   orderSuccess: ['data'],
+  updateWallet: ['wallet']
 });
 
 export const AuthTypes = Types;
@@ -51,6 +52,15 @@ export const successOrders = (state, action) => {
   });
 };
 
+export const walletUpdate = (state, action) => {
+  const { wallet } = action;
+  return state.merge({
+    fetching: false,
+    error: false,
+    user: { ...state?.user, wallet }
+  });
+};
+
 // Something went wrong somewhere.
 export const failure = (state, action) => {
   const { error } = action;
@@ -66,4 +76,5 @@ export const authReducer = createReducer(INITIAL_STATE, {
   [Types.ORDER_SUCCESS]: successOrders,
   [Types.AUTH_FAILURE]: failure,
   [Types.REGISTER_REQUEST]: request,
+  [Types.UPDATE_WALLET]: walletUpdate,
 });
