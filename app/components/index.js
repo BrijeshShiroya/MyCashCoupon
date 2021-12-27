@@ -6,6 +6,7 @@ import BottomLineButton from './BottomLineButton'
 import WalletBalance from './WalletBalance'
 import HistoryItem from './HistoryItem'
 import CashbackItem from './CashbackItem'
+import NoInternet from './NoInternet'
 
 export {
     Loader,
@@ -15,5 +16,6 @@ export {
     BottomLineButton,
     WalletBalance,
     HistoryItem,
-    CashbackItem
+    CashbackItem,
+    NoInternet
 }

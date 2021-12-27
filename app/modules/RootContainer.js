@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { StatusBar, View } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import Toast from 'react-native-toast-message';
+import { NoInternet } from '../components'
 import { useDispatch } from 'react-redux';
 import AppNavigation from '../navigation/AppNavigation';
 import { ApplicationStyles, Colors } from '../theme';
@@ -34,11 +35,11 @@ const RootContainer = () => {
 
   return (
     <View style={[ApplicationStyles.screen.mainContainer]}>
-      <StatusBar translucent />
+      <StatusBar barStyle={'dark-content'} />
       <AppNavigation ref={navRef} />
       <Toast ref={ref => Toast.setRef(ref)} />
       {/* <AppUpdateModal /> */}
-      {/* {!internet && <NoInternet />} */}
+      {!internet && <NoInternet />}
     </View>
   );
 };
