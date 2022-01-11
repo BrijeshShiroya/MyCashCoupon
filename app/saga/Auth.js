@@ -18,6 +18,7 @@ export function* login(api, action) {
     );
   } else {
     const error = yield call(getError, response?.data);
+    Alert.alert(strings.myCashCoupon, error?.trim());
     yield put(AuthActions.authFailure(error));
   }
 }

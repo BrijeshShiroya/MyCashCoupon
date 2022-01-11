@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FlatList, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import icons from '../../assets/icons';
@@ -9,8 +9,9 @@ import styles from './styles/HomeScreenStyles';
 import { useSelector } from 'react-redux';
 
 const HomeScreen = ({ navigation }) => {
-    const [amount, setAmount] = useState('5000')
     const { user } = useSelector(state => state.auth)
+    const [amount, setAmount] = useState(`${user?.wallet}` || '0')
+
     const data = [
         { title: 'Amazon' },
         { title: 'Big bazar' },
@@ -42,13 +43,14 @@ const HomeScreen = ({ navigation }) => {
                         <View style={styles.priceContainer}>
                             <Text style={styles.rs}>{strings.rs}</Text>
                             <CustomTextInput
+                                editable={false}
                                 numberOfLines={1}
                                 value={amount}
                                 keyboardType={'number-pad'}
                                 placeholder={''}
                                 style={styles.input}
                                 containerStyle={styles.emailContainer}
-                                onChangeText={text => setAmount(text)} />
+                            />
                         </View>
                         <View style={styles.sep} />
                     </View>

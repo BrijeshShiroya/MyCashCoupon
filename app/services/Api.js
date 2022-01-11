@@ -1,7 +1,7 @@
 import { apiConfig } from './Utils';
 const Secrets = {
-  API_URL_DEBUG: 'https://resel.co.in/astevis_new/api/',
-  API_URL: 'https://resel.co.in/astevis_new/api/',
+  API_URL_DEBUG: 'https://resel.co.in/mycc/api/',
+  API_URL: 'https://resel.co.in/mycc/api/',
 };
 const api = apiConfig(__DEV__ ? Secrets.API_URL_DEBUG : Secrets.API_URL);
 

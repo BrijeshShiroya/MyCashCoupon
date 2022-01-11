@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     },
     input: {
         borderBottomWidth: 0,
-        fontFamily: Fonts.type.bold,
+        fontFamily: Fonts.type.regular,
         fontSize: Fonts.size.h1,
         color: Colors.themeBlack,
         marginTop: 5
