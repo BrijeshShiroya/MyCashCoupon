@@ -11,6 +11,7 @@ const icons = {
   addMoney: require('./addMoney.png'),
   withdrawMoney: require('./withdrawMoney.png'),
   barcode: require('./barcode.png'),
+  cashbackbg: require('./cashbackbg.png'),
 };
 
 export default icons;

@@ -14,6 +14,7 @@ import HomeScreen from '../modules/Home/HomeScreen';
 import ProfileScreen from '../modules/Profile/ProfileScreen';
 import QRScanScreen from '../modules/Home/QRScanScreen';
 import colors from '../theme/Colors';
+import WithdrawScreen from '../modules/Home/WithdrawScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -60,6 +61,7 @@ const HomeStack = () => {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
       <Stack.Screen name="QRScanScreen" component={QRScanScreen} />
+      <Stack.Screen name="WithdrawScreen" component={WithdrawScreen} />
     </Stack.Navigator>
   );
 };

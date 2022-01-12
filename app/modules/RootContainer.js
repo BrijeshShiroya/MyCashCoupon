@@ -36,7 +36,6 @@ const RootContainer = () => {
 
   return (
     <View style={[ApplicationStyles.screen.mainContainer]}>
-      <StatusBar barStyle={'light-content'} />
       <AppNavigation ref={navRef} />
       <Toast ref={ref => Toast.setRef(ref)} />
       {/* <AppUpdateModal /> */}

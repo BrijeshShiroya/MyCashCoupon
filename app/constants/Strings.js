@@ -16,6 +16,7 @@ const strings = {
   history: 'History',
   cashbackStores: 'Cashback Stores',
   balance: 'Balance',
+  currentBalance: 'Current Balance',
   rs: '₹',
   welcomeBack: 'Welcome back to My Cash Coupon',
   withdraw: 'Withdraw',

@@ -25,7 +25,7 @@ const HomeScreen = ({ navigation }) => {
     }
 
     const onWithdrawPress = () => {
-
+        navigation.navigate('WithdrawScreen')
     }
 
     const onHistoryPress = () => {
