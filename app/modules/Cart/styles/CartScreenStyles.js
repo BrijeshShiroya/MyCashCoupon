@@ -3,9 +3,17 @@ import { ApplicationStyles, scale } from '../../../theme';
 
 const styles = StyleSheet.create({
   ...ApplicationStyles.screen,
-  container: {
-    padding: scale(20),
+  listContainer: {
+    padding: scale(20)
   },
+  item: {
+    height: 150,
+    width: '100%',
+    borderRadius: 5
+  },
+  sep: {
+    height: 22
+  }
 });
 
 export default styles;

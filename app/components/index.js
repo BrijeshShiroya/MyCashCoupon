@@ -7,6 +7,7 @@ import WalletBalance from './WalletBalance'
 import HistoryItem from './HistoryItem'
 import CashbackItem from './CashbackItem'
 import NoInternet from './NoInternet'
+import CartItem from './CartItem'
 
 export {
     Loader,
@@ -17,5 +18,6 @@ export {
     WalletBalance,
     HistoryItem,
     CashbackItem,
-    NoInternet
+    NoInternet,
+    CartItem
 }

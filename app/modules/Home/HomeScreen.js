@@ -3,7 +3,7 @@ import { FlatList, ScrollView, Text, TouchableOpacity, View } from 'react-native
 import FastImage from 'react-native-fast-image';
 import icons from '../../assets/icons';
 import CustomButton from '../../components/CustomButton';
-import { CashbackItem, CustomTextInput } from '../../components';
+import { CartItem, CashbackItem, CustomTextInput } from '../../components';
 import strings from '../../constants/Strings';
 import styles from './styles/HomeScreenStyles';
 import { useSelector } from 'react-redux';
@@ -68,6 +68,9 @@ const HomeScreen = ({ navigation }) => {
                         <FastImage source={icons.tabHistory} style={styles.historyIcon} />
                         <Text style={styles.history}>{strings.history}</Text>
                     </TouchableOpacity>
+                </View>
+                <View style={styles.itemContainer}>
+                    <CartItem icon={icons.caskbackbg} />
                 </View>
                 <>
                     <Text style={styles.listHeader}>{strings.topCashback}</Text>

@@ -105,6 +105,9 @@ const styles = StyleSheet.create({
         fontFamily: Fonts.type.regular,
         fontSize: Fonts.size.input,
         color: Colors.themeBlack,
+    },
+    itemContainer: {
+        marginVertical: verticalScale(20)
     }
 });
 
