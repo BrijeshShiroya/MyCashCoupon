@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux';
 import AppNavigation from '../navigation/AppNavigation';
 import { ApplicationStyles, Colors } from '../theme';
 import ConfigTypes from '../redux/ConfigRedux'
+import colors from '../theme/Colors';
 
 const RootContainer = () => {
   const navRef = useRef();
@@ -35,7 +36,7 @@ const RootContainer = () => {
 
   return (
     <View style={[ApplicationStyles.screen.mainContainer]}>
-      <StatusBar barStyle={'dark-content'} />
+      <StatusBar barStyle={'light-content'} />
       <AppNavigation ref={navRef} />
       <Toast ref={ref => Toast.setRef(ref)} />
       {/* <AppUpdateModal /> */}
