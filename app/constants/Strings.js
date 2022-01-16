@@ -20,6 +20,7 @@ const strings = {
   rs: '₹',
   welcomeBack: 'Welcome back to My Cash Coupon',
   withdraw: 'Withdraw',
+  bankAccounts: 'Bank Accounts',
   topCashback: 'TOP Cashback Stores',
   invalidEmail: 'Please enter valid email',
   invalidName: 'Please enter Name',
@@ -37,7 +38,8 @@ const strings = {
   ok: 'Ok',
   couponAdded: 'Coupon added successfully',
   notEnoughBalance: `You don't have enough balance`,
-  invalidAmount: 'Please enter valid amount'
+  invalidAmount: 'Please enter valid amount',
+  withdrawalAmount: 'Withdrawal Amount'
 };
 
 export default strings;

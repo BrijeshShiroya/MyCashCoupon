@@ -5,10 +5,11 @@ import icons from '../../assets/icons';
 import { CustomButton, CustomHeader, CustomTextInput, WalletBalance } from '../../components';
 import strings from '../../constants/Strings';
 import { isAmountValid, isEnoughBalance, showAlert } from '../../services/Utils';
-import styles from './styles/WithdrawScreenStyles';
+import styles from './styles/BankAccountScreenStyles';
 
-const WithdrawScreen = ({ navigation }) => {
+const BankAccountScreen = ({ navigation, route }) => {
   const dispatch = useDispatch();
+  const amount = route?.params?.amount || '0'
   const [withdrawAmount, setWithdrawAmount] = useState('1000')
   const { min_withdraw, max_withdraw } = useSelector(state => state.config.configData)
   const { user } = useSelector(state => state.auth)
@@ -19,7 +20,7 @@ const WithdrawScreen = ({ navigation }) => {
     } else if (!isAmountValid(withdrawAmount, min_withdraw, max_withdraw)) {
       showAlert(strings.invalidAmount)
     } else {
-      navigation.navigate('BankAccountScreen', { amount: withdrawAmount })
+      showAlert('Valid')
     }
   }
 
@@ -27,27 +28,11 @@ const WithdrawScreen = ({ navigation }) => {
     <View>
       <CustomHeader
         left
-        title={strings.withdraw}
+        title={strings.bankAccounts}
         leftIcon={icons.back}
         leftOnPress={() => navigation.goBack()}
       />
-      <WalletBalance title={strings.currentBalance} amount={user?.wallet || '0'} />
-      <View style={styles.withDrawContainer}>
-        <View style={styles.priceContainer}>
-          <Text style={styles.rs}>{strings.rs}</Text>
-          <CustomTextInput
-            numberOfLines={1}
-            value={withdrawAmount}
-            keyboardType={'number-pad'}
-            placeholder={''}
-            style={styles.input}
-            containerStyle={styles.emailContainer}
-            onChangeText={text => setWithdrawAmount(text)}
-          />
-        </View>
-        <View style={styles.bottomLine} />
-        <Text style={styles.limit}>{`You can withdraw min. ${min_withdraw} and maximum upto ${max_withdraw}.`}</Text>
-      </View>
+      <WalletBalance title={strings.withdrawalAmount} amount={amount} />
       <CustomButton
         title={strings.withdraw}
         style={styles.withdrawButton}
@@ -57,4 +42,4 @@ const WithdrawScreen = ({ navigation }) => {
   );
 };
 
-export default WithdrawScreen;
+export default BankAccountScreen;

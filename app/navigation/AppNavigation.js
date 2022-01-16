@@ -15,6 +15,7 @@ import ProfileScreen from '../modules/Profile/ProfileScreen';
 import QRScanScreen from '../modules/Home/QRScanScreen';
 import colors from '../theme/Colors';
 import WithdrawScreen from '../modules/Home/WithdrawScreen';
+import BankAccountScreen from '../modules/Home/BankAccountScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -62,6 +63,7 @@ const HomeStack = () => {
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
       <Stack.Screen name="QRScanScreen" component={QRScanScreen} />
       <Stack.Screen name="WithdrawScreen" component={WithdrawScreen} />
+      <Stack.Screen name="BankAccountScreen" component={BankAccountScreen} />
     </Stack.Navigator>
   );
 };
