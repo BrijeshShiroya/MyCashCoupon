@@ -39,7 +39,8 @@ const strings = {
   couponAdded: 'Coupon added successfully',
   notEnoughBalance: `You don't have enough balance`,
   invalidAmount: 'Please enter valid amount',
-  withdrawalAmount: 'Withdrawal Amount'
+  withdrawalAmount: 'Withdrawal Amount',
+  somethingWentWrong: 'Something went wrong, please try again after sometime'
 };
 
 export default strings;

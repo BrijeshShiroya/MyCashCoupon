@@ -1,28 +1,42 @@
-import React, { useState } from 'react';
-import { Text, View } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { FlatList, Text, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import icons from '../../assets/icons';
-import { CustomButton, CustomHeader, CustomTextInput, WalletBalance } from '../../components';
+import { CustomButton, CustomHeader, WalletBalance } from '../../components';
 import strings from '../../constants/Strings';
-import { isAmountValid, isEnoughBalance, showAlert } from '../../services/Utils';
+import API from '../../services/Api';
 import styles from './styles/BankAccountScreenStyles';
+const api = API.home();
 
 const BankAccountScreen = ({ navigation, route }) => {
   const dispatch = useDispatch();
   const amount = route?.params?.amount || '0'
-  const [withdrawAmount, setWithdrawAmount] = useState('1000')
-  const { min_withdraw, max_withdraw } = useSelector(state => state.config.configData)
+  const [listBank, setListBank] = useState([])
+  const [loading, setLoading] = useState(false)
   const { user } = useSelector(state => state.auth)
 
-  const onWithdrawPress = () => {
-    if (!isEnoughBalance(user?.wallet, withdrawAmount)) {
-      showAlert(strings.notEnoughBalance)
-    } else if (!isAmountValid(withdrawAmount, min_withdraw, max_withdraw)) {
-      showAlert(strings.invalidAmount)
-    } else {
-      showAlert('Valid')
+  useEffect(async () => {
+    const payload = {
+      user_id: user?.id
     }
-  }
+    try {
+      setLoading(true)
+      const response = await api.getuserbank(payload);
+      setLoading(false)
+      if (response?.data?.status === 200 && !response?.data?.error) {
+        setListBank(response?.data?.data)
+      } else {
+        Toast.show({
+          type: 'info',
+          position: 'bottom',
+          text2: strings.somethingWentWrong,
+        });
+        setListBank([])
+      }
+    } catch (error) {
+      setLoading(false)
+    }
+  }, [])
 
   return (
     <View>
@@ -33,11 +47,12 @@ const BankAccountScreen = ({ navigation, route }) => {
         leftOnPress={() => navigation.goBack()}
       />
       <WalletBalance title={strings.withdrawalAmount} amount={amount} />
+      <FlatList data={listBank} renderItem={({ item }) => <Text>{item?.type}</Text>} />
       <CustomButton
         title={strings.withdraw}
         style={styles.withdrawButton}
         titleStyle={styles.buttonTitle}
-        onPress={onWithdrawPress} />
+        onPress={() => { }} />
     </View>
   );
 };

@@ -11,7 +11,7 @@ const home = () => {
   const history = (id) => api.post('gethistory', id);
   const config = () => api.get('config');
   const getcoupon = (couponData) => api.post('getcoupon', couponData);
-  const brands = type => api.post('listBrands', type);
+  const getuserbank = id => api.post('getuserbank', id);
   const exlusiveProduct = () => api.get('exclusiveProducts');
   const productFilter = filterData => api.post('productfilter', filterData);
   const homeCategories = () => api.get('homeCategories');
@@ -36,7 +36,7 @@ const home = () => {
     history,
     config,
     getcoupon,
-    brands,
+    getuserbank,
     exlusiveProduct,
     history,
     productFilter,
