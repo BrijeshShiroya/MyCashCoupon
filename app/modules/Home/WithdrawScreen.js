@@ -3,16 +3,24 @@ import { Text, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import icons from '../../assets/icons';
 import { CustomButton, CustomHeader, CustomTextInput, WalletBalance } from '../../components';
-import styles from './styles/WithdrawScreenStyles';
 import strings from '../../constants/Strings';
+import { isAmountValid, isEnoughBalance, showAlert } from '../../services/Utils';
+import styles from './styles/WithdrawScreenStyles';
 
 const WithdrawScreen = ({ navigation }) => {
   const dispatch = useDispatch();
   const [withdrawAmount, setWithdrawAmount] = useState('1000')
+  const { min_withdraw, max_withdraw } = useSelector(state => state.config.configData)
   const { user } = useSelector(state => state.auth)
 
   const onWithdrawPress = () => {
-
+    if (!isEnoughBalance(user?.wallet, withdrawAmount)) {
+      showAlert(strings.notEnoughBalance)
+    } else if (!isAmountValid(withdrawAmount, min_withdraw, max_withdraw)) {
+      showAlert(strings.invalidAmount)
+    } else {
+      showAlert('Valid')
+    }
   }
 
   return (
@@ -38,7 +46,7 @@ const WithdrawScreen = ({ navigation }) => {
           />
         </View>
         <View style={styles.bottomLine} />
-        <Text style={styles.limit}>{strings.withdrawLimit}</Text>
+        <Text style={styles.limit}>{`You can withdraw min. ${min_withdraw} and maximum upto ${max_withdraw}.`}</Text>
       </View>
       <CustomButton
         title={strings.withdraw}

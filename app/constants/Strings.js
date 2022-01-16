@@ -36,7 +36,8 @@ const strings = {
   confirmCoupon: (coupon) => `Are you sure you want to add ${coupon} couponcode?`,
   ok: 'Ok',
   couponAdded: 'Coupon added successfully',
-  withdrawLimit: 'You can withdraw min. 1,000 and maximum upto 10,000.'
+  notEnoughBalance: `You don't have enough balance`,
+  invalidAmount: 'Please enter valid amount'
 };
 
 export default strings;

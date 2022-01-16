@@ -39,3 +39,17 @@ export const getDeviceId = async () => {
 export const showAlert = message => {
   Alert.alert(strings.myCashCoupon, message);
 };
+
+export const isEnoughBalance = (currentBalance, amount) => {
+  if (currentBalance >= amount) {
+    return true
+  }
+  return false
+};
+
+export const isAmountValid = (amount = 0, minAmount = 0, maxAmount = 0) => {
+  if (Number(minAmount) <= Number(amount) && Number(maxAmount) >= Number(amount)) {
+    return true
+  }
+  return false
+};
