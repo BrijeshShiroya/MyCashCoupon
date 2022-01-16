@@ -27,6 +27,8 @@ const colors = {
   lightRed: '#FB001330',
   lightblack: '#00000090',
   filterTopCategory: '#F2F2F2',
-  filterSep: '#E7E7E7'
+  filterSep: '#E7E7E7',
+  limitText: '#505050'
+
 };
 export default colors;
