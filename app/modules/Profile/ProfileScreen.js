@@ -1,6 +1,7 @@
 import React from 'react';
 import { Alert, Text, View } from 'react-native';
 import { useDispatch } from 'react-redux';
+import { CustomButton } from '../../components';
 import strings from '../../constants/Strings';
 import styles from './styles/ProfileScreenStyles';
 
@@ -20,7 +21,11 @@ const ProfileScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text onPress={onLogout}>Logout</Text>
+      <CustomButton
+        title={strings.logout}
+        style={styles.logoutButton}
+        titleStyle={styles.buttonTitle}
+        onPress={onLogout} />
     </View>
   );
 };

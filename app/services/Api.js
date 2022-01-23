@@ -12,7 +12,7 @@ const home = () => {
   const config = () => api.get('config');
   const getcoupon = (couponData) => api.post('getcoupon', couponData);
   const getuserbank = id => api.post('getuserbank', id);
-  const exlusiveProduct = () => api.get('exclusiveProducts');
+  const withdrawal = (data) => api.post('withdrawal', data);
   const productFilter = filterData => api.post('productfilter', filterData);
   const homeCategories = () => api.get('homeCategories');
   const categories = () => api.get('listCategories');
@@ -37,7 +37,7 @@ const home = () => {
     config,
     getcoupon,
     getuserbank,
-    exlusiveProduct,
+    withdrawal,
     history,
     productFilter,
     homeCategories,

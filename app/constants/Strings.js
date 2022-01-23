@@ -40,7 +40,8 @@ const strings = {
   notEnoughBalance: `You don't have enough balance`,
   invalidAmount: 'Please enter valid amount',
   withdrawalAmount: 'Withdrawal Amount',
-  somethingWentWrong: 'Something went wrong, please try again after sometime'
+  somethingWentWrong: 'Something went wrong, please try again after sometime',
+  confirm: 'Confirm'
 };
 
 export default strings;

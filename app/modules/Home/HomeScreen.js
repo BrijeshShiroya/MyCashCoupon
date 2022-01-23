@@ -20,6 +20,10 @@ const HomeScreen = ({ navigation }) => {
         { title: 'Ajio' },
     ]
 
+    useEffect(() => {
+        setAmount(`${user?.wallet}`)
+    }, [user?.wallet])
+
     const onBarcodePress = () => {
         navigation.navigate('QRScanScreen')
     }
